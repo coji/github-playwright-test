@@ -24,7 +24,7 @@ test("TechTalkJP website", async ({ page }) => {
   ).toBeVisible()
 })
 
-test.only("TechTalkJP website in English", async ({ page }) => {
+test("TechTalkJP website in English", async ({ page }) => {
   await page.goto("https://www.techtalk.jp/")
 
   // English を選択
