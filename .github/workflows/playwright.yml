@@ -47,7 +47,7 @@ jobs:
         with:
           path: |
             ~/.cache/ms-playwright
-          key: cache-playwright-linux
+          key: ${{ runner.os }}-playwright-${{ hashFiles('**/pnpm-lock.yaml') }}
 
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
@@ -55,6 +55,10 @@ jobs:
       - name: Install Playwright Browsers
         if: steps.playwright-cache.outputs.cache-hit != 'true'
         run: pnpm dlx playwright install --with-deps
+
+      - name: Install Playwright Browsers from cache
+        if: steps.playwright-cache.outputs.cache-hit == 'true'
+        run: pnpm dlx playwright install-deps
 
       - name: Run Playwright tests
         run: pnpm run test:e2e
