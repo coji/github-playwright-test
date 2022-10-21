@@ -16,7 +16,8 @@ const config: PlaywrightTestConfig = {
   use: {
     actionTimeout: 0,
     trace: "on-first-retry",
-    video: "on"
+    video: "on-first-retry",
+    screenshot: "on"
   },
 
   projects: [
