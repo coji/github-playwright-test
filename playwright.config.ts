@@ -15,8 +15,8 @@ const config: PlaywrightTestConfig = {
   reporter: "html",
   use: {
     actionTimeout: 0,
-    trace: "on-first-retry",
-    video: "on-first-retry"
+    trace: "retain-on-failure",
+    video: "retain-on-failure"
   },
 
   projects: [
