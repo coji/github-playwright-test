@@ -5,12 +5,10 @@ specifiers:
   '@types/node': 18.15.3
   playwright: ^1.31.2
 
-dependencies:
-  playwright: 1.31.2
-
 devDependencies:
   '@playwright/test': 1.31.2
   '@types/node': 18.15.3
+  playwright: 1.31.2
 
 packages:
 
@@ -41,6 +39,7 @@ packages:
     resolution: {integrity: sha512-a1dFgCNQw4vCsG7bnojZjDnPewZcw7tZUNFN0ZkcLYKj+mPmXvg4MpaaKZ5SgqPsOmqIf2YsVRkgqiRDxD+fDQ==}
     engines: {node: '>=14'}
     hasBin: true
+    dev: true
 
   /playwright/1.31.2:
     resolution: {integrity: sha512-jpC47n2PKQNtzB7clmBuWh6ftBRS/Bt5EGLigJ9k2QAKcNeYXZkEaDH5gmvb6+AbcE0DO6GnXdbl9ogG6Eh+og==}
@@ -49,4 +48,4 @@ packages:
     requiresBuild: true
     dependencies:
       playwright-core: 1.31.2
-    dev: false
+    dev: true

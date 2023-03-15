@@ -11,14 +11,13 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "1.31.2",
-    "@types/node": "18.15.3"
+    "@types/node": "18.15.3",
+    "playwright": "^1.31.2"
   },
   "prettier": {
     "semi": false,
     "trailingComma": "none",
     "singleQuote": true
   },
-  "dependencies": {
-    "playwright": "^1.31.2"
-  }
+  "dependencies": {}
 }
