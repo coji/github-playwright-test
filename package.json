@@ -11,11 +11,11 @@
   "license": "ISC",
   "devDependencies": {
     "@playwright/test": "1.29.1",
-    "@types/node": "18.11.17",
-    "playwright": "1.29.1"
+    "@types/node": "18.11.17"
   },
   "prettier": {
     "semi": false,
-    "trailingComma": "none"
+    "trailingComma": "none",
+    "singleQuote": true
   }
 }
