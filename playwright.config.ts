@@ -12,22 +12,15 @@ const config: PlaywrightTestConfig = {
   forbidOnly: !!process.env.CI,
   retries: process.env.CI ? 2 : 0,
   workers: process.env.CI ? 1 : undefined,
-  reporter: 'html',
+  reporter: 'list',
   use: {
     actionTimeout: 0,
-    trace: 'retain-on-failure',
-    video: 'retain-on-failure'
+    trace: process.env.CI ? 'retain-on-failure' : 'on',
+    video: process.env.CI ? 'retain-on-failure' : 'on'
   },
-
   projects: [
-    {
-      name: 'Mobile Chrome',
-      use: { ...devices['Pixel 5'] }
-    },
-    {
-      name: 'Mobile Safari',
-      use: { ...devices['iPhone 12'] }
-    }
+    { name: 'Mobile Chrome', use: { ...devices['Pixel 5'] } },
+    { name: 'Mobile Safari', use: { ...devices['iPhone 12'] } }
   ],
   outputDir: 'test-results/'
 }
